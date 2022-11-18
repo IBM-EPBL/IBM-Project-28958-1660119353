@@ -13,6 +13,7 @@ def index():
         for i in request.form:
             val = request.form[i]
             if val == '':
+                return redirect(url_for("index.html"))
             arr.append(float(val))
         Serial_No =1
         gre = float(request.form['gre'])
